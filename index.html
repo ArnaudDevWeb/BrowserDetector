@@ -51,12 +51,35 @@
     <main class="container">
         <h1>Navigateur :</h1>
         <ul>
-            <li class="chrome isSelected">Chrome</li>
+            <li class="chrome">Chrome</li>
             <li class="opera">Opera</li>
             <li class="safari">Safari</li>
             <li class="firefox">FireFox</li>
             <li class="edge">Edge</li>
         </ul>
     </main>
+    <script>
+        let userAgent = navigator.userAgent; // navigator est un objet qui contient des informations à propos du navigateur
+        console.log(userAgent);
+        let browser;
+
+        if (userAgent.match(/edg/i)) {
+            browser = 'edge';
+        } else if(userAgent.match(/firefox|fwios/i)){
+            browser = 'firefox';
+        } else if(userAgent.match(/opr/i)) {
+            browser ='opera';
+        } else if(userAgent.match(/chrome|chromium|vrios/i)){
+            browser = 'chrome';
+        }else if (userAgent.match(/safari/i)){
+            browser = 'safari';
+        }else {
+            alert('La detextion a échouée !!!');
+        }
+        console.log(browser);
+
+        const BROWSER = document.querySelector(`.${browser}`);
+        BROWSER.classList.add('isSelected');
+    </script>
 </body>
 </html>
