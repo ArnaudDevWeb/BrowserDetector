@@ -19,12 +19,39 @@
             min-height: 100vh;
             background: linear-gradient(14deg, black 50%, darkred 50%);
         }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .container h1{
+            color: blueviolet;
+            font-size: 50px;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        ul li{
+            list-style: none;
+            padding-left: 10px;
+        }
+        .isSelected{
+            color: turquoise;
+            text-shadow: 3px 3px 10px whitesmoke;
+            font-size: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <main class="container">
+        <h1>Navigateur :</h1>
         <ul>
-            <li class="chrome">Chrome</li>
+            <li class="chrome isSelected">Chrome</li>
             <li class="opera">Opera</li>
             <li class="safari">Safari</li>
             <li class="firefox">FireFox</li>
